@@ -11,7 +11,13 @@ const routes: Routes = [
 {
   path: 'aluno',
   loadChildren: () => import('./aluno/aluno-module').then(m => m.AlunoModule)
+},
+{
+  path: 'lista1',
+  loadChildren: () => import('./lista1/lista1-module').then(m => m.Lista1Module)
 }
+
+
 
 ];
 

@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-ex2',
+  standalone: false,
+  templateUrl: './ex2.html',
+  styleUrl: './ex2.css',
+})
+export class Ex2 {
+  produto = 'teclado'
+  preco = 150;
+  quantidade = 3;
+
+   total = this.preco * this.quantidade
+}
