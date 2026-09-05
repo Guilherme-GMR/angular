@@ -7,10 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './ex5.css',
 })
 export class Ex5 {
-  curtidas = 0
+  curtidas = 0;
 
-  curtir() {
-    
+  curtir(){
+   this.curtidas++;
   }
-  
 }
