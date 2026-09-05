@@ -13,6 +13,9 @@ export class Ex6 {
    this.curtidas++;
 }
   curtirmenos(){
-    this.curtidas--;
+    if(this.curtidas > 0){
+      this.curtidas--;
   }
+  
+}
 }

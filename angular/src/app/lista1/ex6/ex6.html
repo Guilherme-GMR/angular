@@ -7,7 +7,7 @@
 </head>
 <body>
     <button (click)="curtirmais()">Curtir</button>
-    <button (click)="curtirmenos()">Descurtir</button>
+    <button (click)="curtirmenos()" [disabled]="curtidas === 0">Descurtir</button>
     <h1>Curtidas igual: {{curtidas}} </h1>
 </body>
 </html>

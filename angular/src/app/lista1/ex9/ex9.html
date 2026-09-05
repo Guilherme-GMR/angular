@@ -1,0 +1,7 @@
+<label>Produto</label>
+    <input type="text" [(ngModel)]="produto" placeholder="informe o produto">
+
+    <button (click)="mais()">+</button>
+    <button (click)="menos()" [disabled]="estoque === 0">-</button>
+    <h1>Produto: {{produto}}</h1>
+    <h1>Estoque total: {{estoque}} </h1>
