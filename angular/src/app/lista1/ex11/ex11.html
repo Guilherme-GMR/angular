@@ -1,0 +1,25 @@
+ <label>Produto</label>
+    <input type="text" [(ngModel)]="produto" placeholder="informe o produto">
+
+    <label>Preço</label>
+    <input type="number" [(ngModel)]="preco" placeholder="Informe o preço">
+
+    <p><label>Quantidade: {{quantidade}}</label>
+    <p><button (click)="mais()">+</button>
+    <button (click)="menos()" [disabled]="quantidade === 1">-</button></p>
+    
+    
+
+    <button [disabled]="preco === 0"(click)="entrar()">
+    
+    Entrar </button>
+
+    <div *ngIf="resultado">
+    <p>Produto: {{produto}}</p>
+
+    <p>Preço: {{ preco | currency:'BRL' }}</p>
+    
+    <p>Quantidade: {{quantidade}}</p>
+
+    <p>Total: {{ total | currency:'BRL' }}</p>
+</div>
