@@ -1,0 +1,19 @@
+ <label>Aluno</label>
+    <input type="text" [(ngModel)]="aluno" placeholder="informe o nome">
+
+    <p><label>Quantidade de materias: {{quantidade}}</label>
+    <p><button (click)="mais()">+</button>
+    <button (click)="menos()" [disabled]="quantidade === 1">-</button></p>
+    
+    
+
+    <button [disabled]="quantidade === 0"(click)="entrar()">
+    
+    Entrar </button>
+
+    <div *ngIf="resultado">
+        <p>Matricula realizada!</p>
+    <p>Aluno: {{aluno}}</p>
+    
+    <p>Materias matriculadas: {{quantidade}}</p>
+</div>
