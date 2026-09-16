@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-  <button (click)="alterarmensagem()">
-    mostrar ou ocultar </button>
+<button (click)="alterarmensagem()">
+  Mostrar ou ocultar
+</button>
 
-    <p *ngIf="visivel">
-  Bem-vindo ao sistema
-</p>
-</body>
-</html>
+@if (visivel) {
+  <p>Bem-vindo ao sistema</p>
+}

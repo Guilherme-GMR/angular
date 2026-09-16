@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './ex2.html',
   styleUrl: './ex2.css',
 })
-export class Ex2 {}
+export class Ex2 {
+
+  usuarioLogado: boolean = false;
+
+  autenticado(){
+    this.usuarioLogado = !this.usuarioLogado
+  }
+}
