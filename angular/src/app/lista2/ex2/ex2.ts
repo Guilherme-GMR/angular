@@ -10,7 +10,8 @@ export class Ex2 {
 
   usuarioLogado: boolean = false;
 
-  autenticado(){
-    this.usuarioLogado = !this.usuarioLogado
+  autenticado(): void {
+    this.usuarioLogado = !this.usuarioLogado;
   }
+
 }
