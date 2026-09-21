@@ -1,0 +1,23 @@
+<h2>Lista de nomes</h2>
+
+<p>Quantidade de nomes: {{ nomes.length }}</p>
+
+@if (nomes.length > 0) {
+
+  <ul>
+    <li *ngFor="let nome of nomes">
+      {{ nome }}
+    </li>
+  </ul>
+
+} @else {
+
+  <p>Nenhum nome cadastrado</p>
+
+}
+
+<button (click)="removerUltimo()">Remover último</button>
+
+<button (click)="limparLista()">Limpar lista</button>
+
+<button (click)="restaurarLista()">Restaurar lista</button>

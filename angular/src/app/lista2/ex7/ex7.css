@@ -1,0 +1,15 @@
+.par {
+  background-color: lightblue;
+}
+
+.impar {
+  background-color: lightgray;
+}
+
+.primeiro {
+  font-weight: bold;
+}
+
+.ultimo {
+  border: 2px solid black;
+}
