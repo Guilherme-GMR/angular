@@ -1,0 +1,17 @@
+<h2>Classificação dos produtos</h2>
+
+<ul>
+  <li *ngFor="let produto of produtos">
+
+    <p>{{ produto.nome }}</p>
+
+    @if (produto.quantidade === 0) {
+      <p [ngClass]="'vermelho'">Sem estoque</p>
+    } @else if (produto.quantidade <= 5) {
+      <p [ngClass]="'amarelo'">Estoque baixo</p>
+    } @else {
+      <p [ngClass]="'verde'">Estoque disponível</p>
+    }
+
+  </li>
+</ul>

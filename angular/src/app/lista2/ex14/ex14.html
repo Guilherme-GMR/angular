@@ -1,0 +1,21 @@
+<h2>Lista de nomes</h2>
+
+<p>Quantidade de nomes: {{ nomes.length }}</p>
+
+@if (nomes.length > 0) {
+
+  <ul>
+    @for (nome of nomes; track nome) {
+      <li>
+        {{ nome }}
+      </li>
+    } @empty {
+      <li>Nenhum nome cadastrado</li>
+    }
+  </ul>
+
+} @else {
+
+  <p>Nenhum nome cadastrado</p>
+
+}

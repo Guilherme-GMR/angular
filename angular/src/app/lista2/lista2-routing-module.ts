@@ -8,6 +8,14 @@ import { Ex5 } from './ex5/ex5';
 import { Ex6 } from './ex6/ex6';
 import { Ex7 } from './ex7/ex7';
 import { Ex8 } from './ex8/ex8';
+import { Ex9 } from './ex9/ex9';
+import { Ex10 } from './ex10/ex10';
+import { Ex11 } from '../lista1/ex11/ex11';
+import { Ex12 } from './ex12/ex12';
+import { Ex13 } from './ex13/ex13';
+import { Ex14 } from './ex14/ex14';
+import { Ex14a } from './ex14a/ex14a';
+import { Ex14b } from './ex14b/ex14b';
 
 const routes: Routes = [
   {
@@ -33,6 +41,30 @@ const routes: Routes = [
   },
   {
     path: 'ex8', component: Ex8
+  },
+  { 
+    path: 'ex9', component: Ex9
+  },
+  {
+    path: 'ex10', component: Ex10
+  },
+  {
+    path: 'ex11', component: Ex11
+  },
+  {
+    path: 'ex12', component: Ex12
+  },
+  {
+    path: 'ex13', component: Ex13
+  },
+  {
+    path: 'ex14', component: Ex14
+  },
+  {
+    path: 'ex14a', component: Ex14a
+  },
+  {
+    path: 'ex14b', component: Ex14b
   }
 
 ];

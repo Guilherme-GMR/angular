@@ -1,0 +1,50 @@
+<h2>Lista de tarefas</h2>
+
+<p>Total de tarefas: {{ tarefas.length }}</p>
+
+<p>
+  Concluídas:
+  {{ tarefas.filter(t => t.concluida).length }}
+</p>
+
+<p>
+  Pendentes:
+  {{ tarefas.filter(t => !t.concluida).length }}
+</p>
+
+@if (tarefas.length > 0) {
+
+  <ul>
+    <li
+      *ngFor="let tarefa of tarefas"
+      [ngClass]="{
+        'baixa': tarefa.prioridade === 'baixa',
+        'media': tarefa.prioridade === 'media',
+        'alta': tarefa.prioridade === 'alta',
+        'concluida': tarefa.concluida
+      }">
+
+      <p><strong>{{ tarefa.id }} - {{ tarefa.titulo }}</strong></p>
+
+      <p>Responsável: {{ tarefa.responsavel }}</p>
+
+      <p>Prioridade: {{ tarefa.prioridade }}</p>
+
+      @if (tarefa.concluida) {
+        <p>Concluída</p>
+      } @else {
+        <p>Pendente</p>
+      }
+
+      <button (click)="alterarSituacao(tarefa)">
+        Alterar situação
+      </button>
+
+    </li>
+  </ul>
+
+} @else {
+
+  <p>Não existem tarefas cadastradas.</p>
+
+}
